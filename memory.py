@@ -20,7 +20,10 @@ def open_card(e):
         if click == 1:
             e.widget["bg"] = e.widget.color
             clicked2 = e.widget
-            time(clicked,clicked2)
+            if clicked != clicked2:
+                time(clicked,clicked2)
+            else:
+                e.widget["bg"] = "gray"
         if e.widget.state2 == "normal" and click == 0: 
             e.widget["bg"] = e.widget.color
             click = 1
